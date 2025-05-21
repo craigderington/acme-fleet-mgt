@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+    <div class="main">
+        <div th:replace="~{fragments/page_title :: page_title}"></div>
+
+
+        <div class="container">
+            <form th:object="${vehicle}" method="post">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="vin">VIN</label>
+                    <div class="col-sm-6">
+                        <input type="text" th:field="${vehicle.vin}" class="form-control" id="vin">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="year">Year</label>
+                    <div class="col-sm-6">
+                        <input type="text" th:field="${vehicle.year}" class="form-control" id="year">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="make">Make</label>
+                    <div class="col-sm-6">
+                        <input type="text" th:field="${vehicle.make}" class="form-control" id="make">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="model">Model</label>
+                    <div class="col-sm-6">
+                        <input type="text" th:field="${vehicle.model}" class="form-control" id="model">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="plate">Plate</label>
+                    <div class="col-sm-6">
+                        <input type="text" th:field="${vehicle.licensePlate}" class="form-control" id="plate">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-md btn-success float-end" type="submit"><i class="bi bi-save"> Save</i></button>
+                        <button class="btn btn-md btn-primary float-end mx-1" type="cancel"><i class="bi bi-x"> Cancel</i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+<div th:replace="~{fragments/footer :: scripts}"></div>

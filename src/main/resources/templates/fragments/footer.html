@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Footer Fragment</title>
+    <title>Footer Fragment</title>
 </head>
 <body>
-<footer class="container" th:fragment="footer">
-  <hr class="footer-divider" style="margin-top:100px;">
-  <p class="small">&copy; 2017-2025 Acme Fleet Management, LLC. All rights reserved.</p>
-</footer>
+    <footer class="footer" th:fragment="footer">
+      <div class="container">
+          <p class="muted">&copy; 2017-2025 Acme Fleet Management, LLC. All rights reserved.</p>
+      </div>
+    </footer>
 <div th:fragment="scripts">
   <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
