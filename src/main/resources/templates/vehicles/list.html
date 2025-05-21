@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>Vehicles List</title>
-</head>
-<body>
-This is the Vehicles list.
-</body>
-</html>
+<!doctype html>
+<div th:replace="~{fragments/header :: header}"></div>
+<main role="main">
+<!-- main jumbotron for a primary marketing message or call to action -->
+  <div th:replace="~{fragments/jumbotron :: jumbotron}"></div>
+  <!-- main container -->
+  <div class="container">
+      <table class="table table-striped">
+          <thead>
+            <tr class="thead-dark">
+              <th>ID</th>
+              <th>Year</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>VIN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="vehicle : ${vehicles}">
+              <td th:text="${vehicle.id}"></td>
+              <td th:text="${vehicle.year}"></td>
+              <td th:text="${vehicle.make}"></td>
+              <td th:text="${vehicle.model}"></td>
+              <td th:text="${vehicle.vin}"></td>
+            </tr>
+          </tbody>
+      </table>
+  </div> <!-- /container -->
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+<div th:replace="~{fragments/footer :: scripts}"></div>
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="jumbotron" th:fragment="jumbotron">
+    <div class="container">
+        <h2 class="display-4"><i class="bi bi-car-front"></i> Vehicle Inventory</h2>
+        <p>Browse or Search the Vehicle Inventory by Class or Model.</p>
+        <p>
+            <a class="btn btn-primary btn-md" href="/search" role="button"><i class="bi bi-search"></i> Search</a>
+            <a class="btn btn-dark btn-md" href="/vehicles/create" role="button"><i class="bi bi-car-front"></i> New Vehicle</a>
+            <a class="btn btn-secondary btn-md" href="/lookup" role="button"><i class="bi bi-card-list"></i> VINAuth</a>
+        </p>
+    </div>
+</div>
