@@ -22,7 +22,7 @@
                     <td th:text="${vehicle.model}"></td>
                     <td th:text="${vehicle.vin}"></td>
                     <td th:text="${vehicle.licensePlate}"></td>
-                    <td><a href="#" class="btn btn-primary btn-only"><i class="bi bi-check"></i> </a>
+                    <td><a th:href="@{/vehicles/{id}(id=${vehicle.id})}" class="btn btn-primary btn-only"><i class="bi bi-check"></i> </a>
                         <a href="#" class="btn btn-danger btn-only"><i class="bi bi-x-circle"></i> </a>
                     </td>
                 </tr>

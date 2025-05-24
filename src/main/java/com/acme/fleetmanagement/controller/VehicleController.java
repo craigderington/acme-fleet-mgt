@@ -50,6 +50,12 @@ public class VehicleController {
         return "vehicles/form";
     }
 
+    @PostMapping("/{id}/edit")
+    public String updateVehicle(@PathVariable UUID id, @ModelAttribute Vehicle vehicle) {
+        vehicleService.saveVehicle(vehicle);
+        return "redirect:/vehicles";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteVehicle(@PathVariable UUID id) {
         vehicleService.deleteVehicle(id);

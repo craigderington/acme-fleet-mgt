@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="jumbotron" th:fragment="error">
+  <div class="container">
+    <h2 class="display-4 text-danger"><i class="bi bi-car-front"></i> Error</h2>
+    <p>The system has encountered an error, please click here to continue...</p>
+    <p>
+      <a class="btn btn-primary btn-md" href="/vehicles" role="button"><i class="bi bi-search"></i> Vehicles List</a>
+      <a class="btn btn-dark btn-md" href="/vehicles/create" role="button"><i class="bi bi-car-front"></i> New Vehicle</a>
+    </p>
+  </div>
+</div>
